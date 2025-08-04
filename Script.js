@@ -15,7 +15,7 @@ buttons.forEach(button => {
         const ClickID = button.id;
 
         if (images[ClickID]) {
-            content.innerHTML = `<img src="${images[ClickID]}" alt="${ClickID}" class=" w-full h-full rounded-xl mt-4 object-cover">`;
+            content.innerHTML = `<img src="${images[ClickID]}" alt="${ClickID}" class="absolute top-0 left-0 w-full h-full object-cover rounded-l-xl">`;
         }
 
         buttons.forEach(btn => btn.classList.remove('bg-white/10', 'text-white'));
@@ -28,20 +28,7 @@ window.onload = () => {
 }
 
 
-const buttonOpt = document.querySelectorAll(".btnOption button");
-const imagesOpt = document.querySelectorAll(".imgOpt image")
 
-buttonOpt.forEach((button, index) => {
-    button.addEventListener('click', () => {
-
-        const imageDiv = imagesOpt[index].parentElement;
-        imageDiv.classList.add('animate-bounce');
-
-        setTimeout(() => {
-            imageDiv.classList.remove('animate-bounce');
-        }, 1000)
-    })
-})
 
 function mobileNavFun() {
     const menubtn = document.querySelector(".menue-btn");
